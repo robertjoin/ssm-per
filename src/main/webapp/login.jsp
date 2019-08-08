@@ -47,8 +47,7 @@
                 <input type="password" class="form-control" placeholder="密码" name="password" id="password" required="">
 
             </div>
-            <button type="button" class="btn btn-primary block full-width m-b" onclick="javascript:login();">登 录
-            </button>
+            <button type="button" class="btn btn-primary block full-width m-b" onclick="javascript:login();">登 录</button>
             <p class="text-muted text-center"><a href="##" onclick="javascript:adminlogin.reset();return false;">
                 <small>重置</small>
             </a>

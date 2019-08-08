@@ -10,7 +10,7 @@ function login() {
         alert("密码不能为空！");
         return;
     }
-    $.ajax({
+   /* $.ajax({
         type: "POST",
         dataType: "json",
         url: "/users/cookie",
@@ -27,6 +27,13 @@ function login() {
         error: function () {
             alert("异常！");
         }
-    });
+    });*/
+    $.post("/users/cookie",$('#adminlogin').serialize(),function(result){
+        if (result.resultCode == 200) {
+            setCookie("userName", result.data.currentUser.userName);
+            setCookie("roleName", result.data.currentUser.roleName);
+            window.location.href = "main.jsp";
+        };
 
+    });
 }
